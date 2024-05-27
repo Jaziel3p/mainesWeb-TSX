@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { MenuItem } from "../types/types";
+import { MenuItem } from "../data/types";
+import { FcCollapse, FcExpand } from "react-icons/fc";
 
 interface MenuProps {
   items: MenuItem[];
@@ -29,7 +30,7 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
     return menuItems.map((item) => (
       <li key={item.id}>
         <div
-          className="flex items-center justify-between p-2 hover:bg-gray-200 rounded-md cursor-pointer"
+          className="flex items-center justify-between p-2 hover:bg-slate-700 rounded-md cursor-pointer"
           onClick={() => handleClick(item)}
         >
           <div className="flex items-center space-x-2">
@@ -37,7 +38,7 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
             <span>{item.nombre}</span>
           </div>
           {item.children && item.children.length > 0 && (
-            <span>{expanded[item.id] ? "-" : "+"}</span>
+            <span>{expanded[item.id] ? <FcCollapse /> : <FcExpand />}</span>
           )}
         </div>
         {item.children && item.children.length > 0 && expanded[item.id] && (

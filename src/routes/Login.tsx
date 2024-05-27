@@ -2,7 +2,9 @@ import { useEffect, useState, version } from "react";
 import F_input from "../components/elements/F_input";
 import { useAuth } from "../Auth/AuthProvider";
 import { Navigate } from "react-router-dom";
-import { AuthResponse, AuthResponseError } from "../types/types";
+import { FcKey } from "react-icons/fc";
+import { IoMdKey } from "react-icons/io";
+import { AuthResponse, AuthResponseError } from "../data/types";
 // Password1;
 
 export default function Login() {
@@ -13,7 +15,7 @@ export default function Login() {
   const auth = useAuth();
 
   if (auth.isAuthenticated) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/" />;
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -75,6 +77,7 @@ export default function Login() {
               name="user"
               value={user}
               ph="Usuario/RFC"
+              required
               onChange={handleChange}
             ></F_input>
             <F_input
@@ -82,6 +85,7 @@ export default function Login() {
               name="pass"
               value={pass}
               ph="Contraseña"
+              required
               onChange={handleChange}
             ></F_input>
           </div>
@@ -89,6 +93,7 @@ export default function Login() {
             name="empresa"
             value={empresa}
             ph="Cliente/Empresa"
+            required
             onChange={handleChange}
             classNameIn="mx-32"
           ></F_input>
@@ -99,7 +104,8 @@ export default function Login() {
         </form>
       </div>
       <div className="py-2 flex justify-center">
-        <a href="#" className="text-sm">
+        <a href="#" className="text-sm flex gap-2">
+          <IoMdKey size="1.5em" />
           Recuperar Contraseña
         </a>
       </div>

@@ -5,6 +5,7 @@ interface InputProps {
   ph?: string;
   h?: number;
   w?: number;
+  required?: boolean;
   classNameLabel?: string;
   classNameIn?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,6 +18,7 @@ const F_input: React.FC<InputProps> = ({
   ph = "texto aqui",
   h,
   w,
+  required = false,
   classNameLabel,
   classNameIn,
   onChange,
@@ -34,6 +36,7 @@ const F_input: React.FC<InputProps> = ({
         id={name}
         name={name}
         value={value}
+        required={required}
         onChange={onChange}
         className={
           "border-2 rounded-md border-cyan-800 px-2 py-[1px] " + classNameIn

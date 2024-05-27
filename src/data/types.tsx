@@ -28,7 +28,7 @@ export interface AccessTokenResponse {
 export interface MenuItem {
   id: number;
   nombre: string;
-  icono: string;
+  icono: React.ReactNode;
   url: string;
   children?: MenuItem[];
 }
