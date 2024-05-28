@@ -19,7 +19,6 @@ export const menuData: MenuItem[] = [
     nombre: "Ventas",
     icono: <FcPaid />,
     url: "",
-    render: <Home />,
     children: [
       {
         id: 11,

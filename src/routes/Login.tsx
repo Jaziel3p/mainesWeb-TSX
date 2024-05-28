@@ -78,6 +78,7 @@ export default function Login() {
               value={user}
               ph="Usuario/RFC"
               required
+              columna
               onChange={handleChange}
             ></F_input>
             <F_input
@@ -86,6 +87,7 @@ export default function Login() {
               value={pass}
               ph="Contraseña"
               required
+              columna
               onChange={handleChange}
             ></F_input>
           </div>
@@ -94,6 +96,7 @@ export default function Login() {
             value={empresa}
             ph="Cliente/Empresa"
             required
+            columna
             onChange={handleChange}
             classNameIn="mx-32"
           ></F_input>
