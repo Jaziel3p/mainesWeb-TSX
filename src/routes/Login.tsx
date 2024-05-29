@@ -65,7 +65,7 @@ export default function Login() {
           Software Empresarial
         </p>
       </div>
-      <div className="rounded-2xl bg-gray-200">
+      <div className="rounded-2xl bg-gray-200 shadow-lg">
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <h1 className="text-2xl text-gray-500 font-medium mt-2 mx-auto">
             Maines ERP
@@ -74,30 +74,36 @@ export default function Login() {
           <p className="mx-auto">version {version}</p>
           <div className="flex justify-around">
             <F_input
+              titulo="Usuario/RFC"
               name="user"
               value={user}
               ph="Usuario/RFC"
               required
               columna
+              classNameLabel="text-[15px] font-semibold"
               onChange={handleChange}
             ></F_input>
             <F_input
+              titulo="Contraseña"
               type="password"
               name="pass"
               value={pass}
               ph="Contraseña"
               required
               columna
+              classNameLabel="text-[15px] font-semibold"
               onChange={handleChange}
             ></F_input>
           </div>
           <F_input
+            titulo="Cliente/Empresa"
             name="empresa"
             value={empresa}
             ph="Cliente/Empresa"
             required
             columna
             onChange={handleChange}
+            classNameLabel="text-[15px] font-semibold"
             classNameIn="mx-32"
           ></F_input>
 

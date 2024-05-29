@@ -13,7 +13,7 @@ const App: React.FC = () => {
             </div>
             <Menu items={menuData} />
           </aside>
-          <main className="flex-1 p-4">{<Outlet />}</main>
+          <main className="flex-1 h-">{<Outlet />}</main>
         </div>
       }
     </div>

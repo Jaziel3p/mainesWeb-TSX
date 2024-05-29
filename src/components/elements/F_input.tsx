@@ -1,11 +1,11 @@
 import { IconType } from "react-icons";
 
 interface InputProps {
+  titulo?: string;
   type?: string;
   name: string;
   value: string;
   ph?: string;
-  ph2?: string;
   h?: number;
   w?: number;
   required?: boolean;
@@ -18,11 +18,11 @@ interface InputProps {
 }
 
 const F_input: React.FC<InputProps> = ({
+  titulo = "titulo",
   type = "text",
   name,
   value,
   ph = "texto aqui",
-  ph2 = "texto aqui",
   h,
   w,
   required = false,
@@ -44,14 +44,14 @@ const F_input: React.FC<InputProps> = ({
           "font-normal text-[12px] text-center my-auto" + " " + classNameLabel
         } //
       >
-        {ph}
+        {titulo}
       </label>
       <input
         type={type}
         id={name}
         name={name}
         value={value}
-        placeholder={ph2}
+        placeholder={ph}
         required={required}
         onChange={onChange}
         className={
