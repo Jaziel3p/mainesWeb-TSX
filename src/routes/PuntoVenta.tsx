@@ -14,8 +14,8 @@ const PuntoVenta = () => {
   function handleClick() {}
   return (
     <div>
-      <div className="grid grid-rows-10 h-screen p-2">
-        <div className="row-span-6 overflow-x-auto" id="TABLA">
+      <div className="grid grid-rows-layout h-screen p-4">
+        <div className="overflow-x-auto" id="TABLA">
           <table className="min-w-full bg-white border border-gray-200">
             <thead>
               <tr>
@@ -37,7 +37,7 @@ const PuntoVenta = () => {
             </tbody>
           </table>
         </div>
-        <div className="row-span-4">
+        <div className="">
           <div className="flex gap-2">
             <BotonPdv>F6- Cancelar</BotonPdv>
             <BotonPdv>F7- Cambiar</BotonPdv>
@@ -46,7 +46,7 @@ const PuntoVenta = () => {
             <BotonPdv>F3- Cambiar tabla-captura</BotonPdv>
             <BotonPdv>g1</BotonPdv>
           </div>
-          <div id="bloques" className="grid grid-cols-8 my-4">
+          <div id="bloques" className="grid grid-cols-8 mt-4">
             <div
               id="bloque 1"
               className="col-span-3 flex flex-col gap-2 border-2 rounded-md p-2"
@@ -114,7 +114,7 @@ const PuntoVenta = () => {
             </div>
             <div
               id="bloque 2"
-              className="col-span-3 flex flex-col gap-4 border-2 rounded-md p-3"
+              className="col-span-3 flex flex-col gap-4 border-2 rounded-md p-3 mx-1"
             >
               <F_input
                 titulo="Producto (F4)"
